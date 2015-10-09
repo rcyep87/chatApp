@@ -4,6 +4,15 @@
   <strong>Name:</strong>
   <%= @room.name %>
 </p>
+<ul>
+  <% Message.where(id: @room.id).each do |msg| %>
+
+    <li><%= msg.msg %></li>
+
+  <% end %>
+</ul>
+
+<%= render partial: "messages/form" %>
 
 <%= link_to 'Edit', edit_room_path(@room) %> |
 <%= link_to 'Back', rooms_path %>
