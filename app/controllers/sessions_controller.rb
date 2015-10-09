@@ -16,13 +16,13 @@ class SessionsController < ApplicationController
   end
 
   def destroy #delete login session (logout)
-    session[:logged_in_user_id] = nil
+    session[:user_id] = nil
     redirect_to root_path, notice: "Successfully logged out."
   end
 
   private
 
   def set_user_session(user) #places temporary cookie on client browser
-    session[:logged_in_user_id] = user.id
+    session[:user_id] = user.id
   end
 end

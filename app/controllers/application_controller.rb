@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user
 
+  helper_method :current_user, :user_logged_in?
+
   def authenticate_user
     unless user_logged_in?
       redirect_to login_path
@@ -15,10 +17,10 @@ class ApplicationController < ActionController::Base
       @current_user ||= User.find_by(id: session[:user_id])
     end
   end
-  helper_method :current_user
+
 
   def user_logged_in? #checks to see if newly registered user is logged in
     session[:logged_in_user_id].present?
   end
-  helper_method :user_logged_in?
+  
 end
