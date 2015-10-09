@@ -10,6 +10,7 @@ class MessagesController < ApplicationController
   # GET /messages/1
   # GET /messages/1.json
   def show
+    redirect_to room_path(@message.room_id)
   end
 
   # GET /messages/new

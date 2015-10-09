@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   get    'about', to: 'homepage#show'
 
-  root   'users#new'
+  root   'sessions#new'
 end
