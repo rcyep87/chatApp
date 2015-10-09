@@ -10,7 +10,11 @@ class RoomsController < ApplicationController
   # GET /rooms/1
   # GET /rooms/1.json
   def show
-    @message = Message.new
+    @message = Message.create({
+      room_id: @room.id,
+      user_id: current_user.id
+    })
+
   end
 
   # GET /rooms/new

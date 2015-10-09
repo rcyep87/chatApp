@@ -4,11 +4,10 @@
   <strong>Name:</strong>
   <%= @room.name %>
 </p>
+
 <ul>
-  <% Message.where(id: @room.id).each do |msg| %>
-
+  <% Message.where(room_id: @room.id).each do |msg| %>
     <li><%= msg.msg %></li>
-
   <% end %>
 </ul>
 
