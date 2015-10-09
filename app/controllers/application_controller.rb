@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
 
   def user_logged_in? #checks to see if newly registered user is logged in
-    session[:logged_in_user_id].present?
+    session[:user_id].present?
   end
-  
+
 end
