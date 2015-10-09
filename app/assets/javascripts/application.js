@@ -18,3 +18,9 @@
 //= require components
 //= require_tree .
 //= require materialize-sprockets
+
+$( document ).ready(function() {
+
+  $(".dropdown-button").dropdown();
+
+});
