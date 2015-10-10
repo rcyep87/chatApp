@@ -5,11 +5,13 @@
   <%= @room.name %>
 </p>
 
+<section class='messages'>
 <ul>
   <% Message.where(room_id: @room.id).each do |msg| %>
     <li><%= msg.msg %></li>
   <% end %>
 </ul>
+</section>
 
 <%= render partial: "messages/form" %>
 
