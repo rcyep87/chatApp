@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       set_user_session(user) #creates temporary cookie
       redirect_to rooms_path, notice: "Successfully logged in!"
     else
-      flash[:alert] = "Username or Password did not match"
+      flash.alert = "Username or Password did not match"
       render :new
     end
   end

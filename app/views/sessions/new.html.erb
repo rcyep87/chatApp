@@ -3,5 +3,9 @@
 <%= form_tag login_path do %>
   <p>Username: <%= text_field_tag :username %></p>
   <p>Password: <%= password_field_tag :password %></p>
-  <p><%= submit_tag "Submit" %></p>
+  <button class="btn waves-effect deep-orange accent-2" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+  </button>
+
+  <!-- <p><%= submit_tag "Submit" %></p> -->
 <% end %>
