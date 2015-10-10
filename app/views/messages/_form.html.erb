@@ -14,8 +14,12 @@
   <div class="field">
     <%= f.label :msg %><br>
     <%= f.text_field :msg %>
+    <%= f.hidden_field :room_id %>
+    <%= f.hidden_field :user_id %>
   </div>
-  <div class="actions">
+
+  <div id='submit-msg' class="waves-effect deep-orange accent-2">Submit</div>
+  <!-- <div class="actions">
     <%= f.submit %>
-  </div>
+  </div> -->
 <% end %>
